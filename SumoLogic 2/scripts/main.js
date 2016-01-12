@@ -92,7 +92,7 @@ angular.module('testApp', [])
    directive.template = 	"<div>{{data.selectText}}</div>"
    						+	"<div>"
    						+		"<div class=\"input-container\">"
-   						+			"<input id='placeholderText' type='text' placeholder= \"{{data.placeholderText}}\" class=\"select-input-box\" ng-model=\"data.value\" ng-focus=\"openDropdown()\" ng-blur=\"closeDropdown()\" ng-keyup=\"refineList()\">"
+   						+			"<input id='placeholderText' type='text' placeholder= \"{{data.placeholderText}}\" class=\"select-input-box\" ng-model=\"data.value\" ng-focus=\"openDropdown()\" ng-blur=\"closeDropdown()\" ng-keyup=\"refineList()\" ng-click=\"data.value != '' || copyList()\">"
    						+			"<div><div class=\"input-arrow\"><i class=\"material-icons\">play_arrow</i></div></div>"
    						+		"</div>"
    						+ 		"<div class=\"select-autocomplete {{dropdownClass}}\">"
@@ -126,11 +126,9 @@ angular.module('testApp', [])
          		$scope.data.selectList = list;
          	}
 
-         	$scope.$watch('data', function(newValue, oldValue) {
-                if (newValue){
-                	$scope.data.value = newValue.value;
-                }
-            }, true);
+         	$scope.copyList = function(){
+         		$scope.data.listCopy = JSON.parse(JSON.stringify($scope.data.selectList));
+         	}
 
          	var init = function(){
          		$scope.dropdownClass = "hide";
