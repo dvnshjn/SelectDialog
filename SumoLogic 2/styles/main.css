@@ -1,0 +1,87 @@
+.input-container .select-input-box {
+	border: none ;
+	border-radius: 3px ;
+    background-color: lightgrey ;
+    padding-left: 1em ;
+    box-shadow: none ;
+    margin: 0 ;
+    box-sizing: border-box ;
+    transition: none ;
+}
+
+.select-box-directive .input-container .select-input-box:focus {
+	background-color: white ;
+	border: 2px solid #2196F3 ;
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #FFFFFF) ;
+}
+
+.card{
+	background-color: #F5F5F5;
+	font-weight: 600;
+	font-family: Arial;
+}
+.card .card-action {
+	text-align: right;
+	border-top: none;
+	padding-top: 0;
+}
+
+.card-action a{
+	width: 25%;
+}
+
+.card label{
+	color: #000000;
+	font-weight: 500;
+}
+
+.select-autocomplete{
+	-webkit-box-shadow: 4px 4px 2px 0px rgba(168,153,153,1);
+	position: absolute;
+    z-index: 2;
+    /* width: 100%; */
+    background-color: white;
+    margin: 0 auto;
+    left: 20px;
+    right: 20px;
+}
+
+.select-element{
+	padding: 0.2em 1em 0.2em 1em;
+}
+
+.select-element:hover{
+	background-color: #2196F3 ;
+}
+
+
+#placeholderText::-webkit-input-placeholder {
+	color: black;
+	opacity: 1;
+	font-weight: 500;
+}
+
+.input-container{
+	display: -webkit-flex;
+}
+
+.input-arrow{
+	-webkit-transform: rotate(90deg) ;
+
+}
+
+.input-arrow i{
+	position: absolute;
+    margin-top: 0.4em;
+    margin-left: 0.4em;
+}
+
+.select-box-directive{
+	margin: 2em;
+}
+
+.close-button{
+    float: right;
+    margin: 0.5em;
+    font-weight: 600;
+}

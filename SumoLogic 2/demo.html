@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+	</head>
+	<body ng-controller="testMainCtrl">
+		<form action="#">
+			<div class="row">
+	        	<div class="col s6 offset-s3">
+	          		<div class="card">
+	          			<div class="close-button"><i class="material-icons">close</i></div>
+	            		<div class="card-content black-text">
+							<span class="card-title blue-text">Select an employee</span>
+							<p>
+						     	<input type="checkbox" id="test5" />
+						     	<label for="test5">Send welcome email to employee</label>
+					    	</p>
+							<select-box data="teamSelectData" class="select-box-directive"></select-box>
+							<select-box data="employeeSelectData" class="select-box-directive"></select-box>
+			            </div>
+			            <div class="card-action">
+			            	<a class="waves-effect waves-light grey btn" ng-click="cancelClick()">Cancel</a>		          		
+		              		<a class="waves-effect waves-light blue btn" ng-click="okClick()">OK</a>
+			            </div>
+	         		 </div>
+	        	</div>
+	      	</div>
+      	</form>
+      	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  		<script src="scripts/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+.card-action{
+	text-align: right;
+}
+
+.selectInputBox{
+	border: none;
+    background-color: lightgrey;
+    padding-left: 1em;
+    box-shadow: none;
+}
